@@ -1,15 +1,20 @@
-import React from "react"
+import React, { useState } from "react"
 import AddUser from "./components/Users/AddUser"
 import UsersList from "./components/Users/UsersList"
 
 function App() {
-	let users = [
+	const [users, setUsers] = useState([
 		{ name: "max", age: 42 },
 		{ name: "david", age: 69 },
-	]
+	])
+	
+	
+	const subminHandler = (user) => {
+	setUsers([user , ...users])
+	}
 	return (
 		<>
-			<AddUser />
+			<AddUser submitHandler={subminHandler}/>
 			<UsersList users={users} />
 		</>
 	)
