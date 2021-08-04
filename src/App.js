@@ -4,8 +4,8 @@ import UsersList from "./components/Users/UsersList"
 
 function App() {
 	const [users, setUsers] = useState([
-		{ name: "max", age: 42 },
-		{ name: "david", age: 69 },
+		{id: Date.now() , name: "max", age: 42 },
+		
 	])
 	
 	

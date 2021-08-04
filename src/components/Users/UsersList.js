@@ -6,7 +6,7 @@ const UsersList = (props) => {
 	let listItems = <h2>404 User not found</h2>
 	if (props.users.length) {
 		listItems = props.users.map((item) => (
-			<li>
+			<li key={item.id}>
 				{item.name} ({item.age} years old)
 			</li>
 		))
